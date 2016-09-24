@@ -73,6 +73,7 @@ h4 {
 #input {
   /*background-color: #fff;*/
   border: 0px solid #C0C2C5;
+  font-family: sans-serif;
   color: #green;
   padding: 5px;
   margin-right: 3px;
@@ -96,9 +97,9 @@ h4 {
     margin: 2;
     padding: 10px;
     list-style: none;
-    background: #000000;
+    background: #141414;
     color: #45D40C;
-    font-family:Courier;;
+    font: 1em 'Andale Mono', Consolas, 'Courier New';
     line-height: 1.8em;
 
     -webkit-border-bottom-right-radius: 3px;
@@ -108,9 +109,3 @@ h4 {
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 3px;
 }
-
-font-family:Courier;
-color: #CCCCCC;
-background: #000000;
-border: 3px double #CCCCCC;
-padding: 10px;
