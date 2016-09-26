@@ -1,3 +1,27 @@
+function sleepFor( sleepDuration ){
+    var now = new Date().getTime();
+    while(new Date().getTime() < now + sleepDuration){ /* do nothing */ } 
+}
+
+var typeTextString;
+var typeTextArray;
+var loopTimer;
+function textLooper() {
+ 	if(typeTextArray.length > 0) {
+		document.getElementById("test-area").innerHTML += typeTextArray.shift();
+	} else {
+		clearTimeout(loopTimer); 
+                return false;
+	}
+	loopTimer = setTimeout('textLooper()',70);
+}
+function typeText()
+{
+      typeTextArray = typeTextString.split("");
+      textLooper();
+}
+
+
 function talkButton() {
   var objDiv = document.getElementById("chat-area");
   var greetResponse = ["Hello","Hi","Hey","How's it going?"];
@@ -12,6 +36,11 @@ function talkButton() {
   else if (hours === 0) {
      hours = 12;
   }
+  
+  
+  //typeTextString = "Test Display";
+  //typeText();
+       
   var datetime = "It is currently " + hours + ":" + currentdate.getMinutes();
   var response = {
     "how old are you": "Very",
@@ -20,10 +49,14 @@ function talkButton() {
     "hello": greetResponse[randomResponse],
     "hi": greetResponse[randomResponse],
     "yo": greetResponse[randomResponse],
+    "what time is it": datetime,
   }
+  
   var nonsense = ["Huh?","I didn't quite get that.","What?"]
-  var random = Math.floor(Math.random() * 14) + 0;
+  var random = Math.floor(Math.random() * 3) + 0;
   if(document.getElementById('input').value != "") {
+      typeTextString = document.getElementById('input').value;
+      typeText();
   var message = document.getElementById('input').value;
   message = message.toLowerCase();
   message = message.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
