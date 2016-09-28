@@ -37,7 +37,6 @@ function talkButton() {
      hours = 12;
   }
 
-
   //typeTextString = "Test Display";
   //typeText();
 
@@ -55,6 +54,7 @@ function talkButton() {
     "what time is it": datetime,
   }
 
+
   var nonsense = ["Huh?","I didn't quite get that.","What?"]
   var random = Math.floor(Math.random() * 3) + 0;
   if(document.getElementById('input').value != "") {
@@ -65,6 +65,7 @@ function talkButton() {
   message = message.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
   $("#chat-area").append(document.getElementById('input').value += "</br>");
   if (response[message] === undefined || response[message] === null) {
+     //$("#chat-area").append("< weiner boy div class='grey'>I didn't quite understand that</div></br>");
      $("#chat-area").append("<div class='grey'>" + nonsense[random] + "</div></br>");
      document.getElementById('input').value = "";
      objDiv.scrollTop = objDiv.scrollHeight;
