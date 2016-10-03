@@ -52,6 +52,11 @@ function talkButton() {
     "hi": greetResponse[randomResponse],
     "howdy": greetResponse[randomResponse],
     "what time is it": datetime,
+    "how are you": "As well as I can be.",
+    "kars4kids":"1877-kars-4-kids",
+    "k4k":"1877-kars-4-kids",
+    "ball point pen":"ball point pen guy",
+    "bop":"Yes",
   }
 
 
@@ -65,7 +70,6 @@ function talkButton() {
   message = message.replace(/[^\w\s]|_/g, "").replace(/\s+/g, " ");
   $("#chat-area").append(document.getElementById('input').value += "</br>");
   if (response[message] === undefined || response[message] === null) {
-     //$("#chat-area").append("< weiner boy div class='grey'>I didn't quite understand that</div></br>");
      $("#chat-area").append("<div class='grey'>" + nonsense[random] + "</div></br>");
      document.getElementById('input').value = "";
      objDiv.scrollTop = objDiv.scrollHeight;
@@ -73,25 +77,24 @@ function talkButton() {
 else {
   if(response[message] == "Yes") {
 
-    alert("You made a mistake.");
+    alert("Test Breaker.");
     txt = "a";
     while(1) {
-      txt = txt += "a";
+      txt = txt += "aaa";
     }
   }
-  else if(response[message] == "The sequence of a lifeform braised in the sand") {
+  else if(response[message] == "1877-kars-4-kids") {
     $("#chat-area").append("<div class='grey'>" + response[message] + "</div>" + "</br>");
-    console.log("EASTER EGG");
     document.getElementById('input').value = "";
     objDiv.scrollTop = objDiv.scrollHeight;
-    window.open('https://www.youtube.com/watch?v=6E5m_XtCX3c','1474605865760','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;
+    console.log("ur ded kid");
+    window.open('https://www.youtube.com/watch?v=OGm9qR_o_n4');return false;
   }
-  else if(response[message] == "I'll set it up") {
+  else if(response[message] == "ball point pen guy") {
     $("#chat-area").append("<div class='grey'>" + response[message] + "</div>" + "</br>");
-    console.log("EASTER EGG");
     document.getElementById('input').value = "";
     objDiv.scrollTop = objDiv.scrollHeight;
-    window.open('battleship.html','1474605865760','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;
+    window.open("laslo.jpg");return false;
   }
   else {
   $("#chat-area").append("<div class='grey'>" + response[message] + "</div>" + "</br>");
