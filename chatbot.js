@@ -57,6 +57,14 @@ function talkButton() {
     "k4k":"1877-kars-4-kids",
     "ball point pen":"ball point pen guy",
     "bop":"Yes",
+    "whats your favorite color":"green",
+    "what is your favorite color":"green",
+    "if you could travel where would you go":"I would go to Amazon.com, it seems to be where the professional bots go.",
+    "do you like my hat":"yes, that's a lovely hat.",
+    "whats your favorite ride":"The Merry-Go Round",
+    "whats your least favorite ride":"Spinning tea cups.",
+    "is this a good question":"sorta",
+    "can you answer one thing for me":"yes",
   }
 
 
